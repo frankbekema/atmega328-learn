@@ -8,18 +8,18 @@ The goal of this project is to learn more about embedded controllers and how to 
 - Arduino IDE
 
 ## Milestones
-- [] Program an arduino without the arduio IDE.
-  - [] Write an Makefile that uses the arduino IDE and compiles the code with that.
-  - [] Use avrdude to upload the code
+- [ ] Program an arduino without the arduio IDE.
+  - [ ] Write an Makefile that uses the arduino IDE and compiles the code with that.
+  - [ ] Use avrdude to upload the code
 - [x] Write a command handler
-- [] Write a SPI command handler
-  - [] Master
-  - [] Slave
-- [] Communicate with two arduino's
+- [ ] Write a SPI command handler
+  - [ ] Master
+  - [ ] Slave
+- [ ] Communicate with two arduino's
 - [x] Build an electronic circuit with the ATMega328PU
-- [] Program an ATMega328PU over SPI
-- [] Write some simple code that works on the ATMega328PU
-  - [] Let a LED flash
+- [ ] Program an ATMega328PU over SPI
+- [ ] Write some simple code that works on the ATMega328PU
+  - [ ] Let a LED flash
 
 ## License
 This project is licensed under the [MIT license](https://opensource.org/licenses/MIT)
