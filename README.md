@@ -5,7 +5,7 @@ The goal of this project is to learn more about embedded controllers and how to 
 
 ## Requirements
 - avrdude
-- Arduino IDE
+- Arduino IDE (https://www.arduino.cc/en/main/software)
 
 ## Milestones
 - [ ] Program an arduino without the arduio IDE.
