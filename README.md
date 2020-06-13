@@ -1,4 +1,4 @@
-# ATMega328PUlearn
+# ATMega328(PU) learn
 Welcome to Frank Bekema's arduino project.
 
 The goal of this project is to learn more about embedded controllers and how to program them.
