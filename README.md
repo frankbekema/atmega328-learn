@@ -11,6 +11,7 @@ The goal of this project is to learn more about embedded controllers and how to 
 - [ ] Program an arduino without the arduio IDE.
   - [ ] Write an Makefile that uses the arduino IDE and compiles the code with that.
   - [ ] Use avrdude to upload the code
+  - [ ] Use avr-gcc
 - [x] Write a command handler
 - [ ] Write a SPI command handler
   - [ ] Master
