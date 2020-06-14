@@ -4,7 +4,6 @@ Welcome to Frank Bekema's arduino project.
 The goal of this project is to learn more about embedded controllers and how to program them.
 
 ## Requirements
-- avrdude
 - Arduino IDE (https://www.arduino.cc/en/main/software)
 
 ## Milestones
