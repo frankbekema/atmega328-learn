@@ -4,10 +4,14 @@
 # Made by Frank Bekema
 #
 
-MODULES=avrdude avr-gcc
+DIRECTORY=$(shell pwd)
+
+MODULES=avrdude avr-gnu-toolchain
 
 AVRDUDE_URL=http://download.savannah.gnu.org/releases/avrdude/avrdude-6.3.tar.gz
 AVRDUDE_OUTDIR=avrdude
+
+AVR_GNU_ARCHIVE=$(DIRECTORY)/sources/avr8-gnu-toolchain-3.6.2.1759-linux.any.x86_64.tar.gz
 
 TMPDIR=tmp
 
@@ -18,10 +22,24 @@ define check_exists
 	fi
 endef
 
-.PHONY: all avrdude init hard_clean clean
+.PHONY: all avrdude avr-gnu-toolchain init hard_clean clean
 
-all: hard_clean avrdude
+all: hard_clean avrdude avr-gnu-toolchain
 
+avr-gnu-toolchain:	
+	@echo "Started build process for avr-gnu-toolchain"
+	pushd ${TMPDIR}; \
+        mkdir -p avr-gnu-toolchain; \
+        tar -xf ${AVR_GNU_ARCHIVE} -C avr-gnu-toolchain; \
+	pushd avr-gnu-toolchain; \
+	pushd $$(find -maxdepth 1 -mindepth 1 -type d -print -quit); \
+	mkdir -p ${DIRECTORY}/avr-gnu-toolchain; \
+	mv -f * ${DIRECTORY}/avr-gnu-toolchain; \
+	popd; \
+	popd; \
+	rm -Rf avr-gnu-toolchain; \
+	popd;
+	@echo "Done building avr-gnu-toolchain!"
 
 avrdude:
 	@echo "Starting build process for avrdude"
@@ -51,7 +69,7 @@ init:
 hard_clean: clean
 	@echo "Hardcleaning all modules"
 	for module in $(MODULES); do \
-		rm -Rf $$module/*; \
+		rm -Rf $$module; \
 	done;
 	@echo "Done hardcleaning all modules"
 
